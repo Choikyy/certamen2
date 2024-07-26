@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas Chilenas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script>
+        function mostrarConfirmacion(event) {
+            event.preventDefault();
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: '¡Tu pedido ha sido recibido!',
+                text: 'Nos pondremos en contacto contigo por correo para más información.',
+                showConfirmButton: false,
+                timer: 3000
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#formulario">Pedidos</a></li>
+                <li><a href="#footer">Contacto</a></li>
+            </ul>
+        </nav>
+        <div id="hero">
+            <h1>Recetas Chilenas</h1>
+        </div>
+    </header>
+    
+    <section id="ofertas">
+        <h2>Ofertas</h2>
+        <div class="oferta">
+            <img src="img/pasteldechoclo.png" alt="Oferta 1">
+            <h3>Pastel de Choclo</h3>
+            <p>$5.000</p>
+        </div>
+        <div class="oferta">
+            <img src="img/empanadas.png" alt="Oferta 2">
+            <h3>Empanadas</h3>
+            <p>$2.000</p>
+        </div>
+        <div class="oferta">
+            <img src="img/cazuela.png" alt="Oferta 3">
+            <h3>Cazuela</h3>
+            <p>$4.000</p>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div class="gallery">
+            <img src="img/1.png" alt="Imagen 1">
+            <img src="img/2.png" alt="Imagen 2">
+            <img src="img/3.png" alt="Imagen 3">
+            <img src="img/4.png" alt="Imagen 4">
+            <img src="img/5.png" alt="Imagen 5">
+            <img src="img/6.png" alt="Imagen 6">
+            <img src="img/7.png" alt="Imagen 7">
+            <img src="img/8.png" alt="Imagen 8">
+            <img src="img/9.png" alt="Imagen 9">
+            <img src="img/10.png" alt="Imagen 10">
+            <img src="img/11.png" alt="Imagen 11">
+            <img src="img/12.png" alt="Imagen 12">
+        </div>
+    </section>
+
+    <section id="formulario">
+        <h2>Formulario de Pedidos</h2>
+        <form onsubmit="mostrarConfirmacion(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            
+            <label for="productos">Productos:</label>
+            <textarea id="productos" name="productos" rows="4" required></textarea>
+            
+            <input type="submit" value="Enviar Pedido">
+        </form>
+    </section>
+    
+
+    <footer id="footer">
+        <h2>Contacto</h2>
+        <p>Teléfono: +56 9 42421313</p>
+        <p>Email: evaluacion@email.cl</p>
+        <p>Dirección: Avenida Siempreviva 742, Springfield</p>
+        <ul>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos de Servicio</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
